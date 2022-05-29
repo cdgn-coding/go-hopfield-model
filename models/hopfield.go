@@ -25,6 +25,10 @@ func eye(n int) *mat.Dense {
 	return mat.NewDense(n, n, d)
 }
 
+func (h *HopfieldModel) WeightDims() (int, int) {
+	return h.weights.Dims()
+}
+
 func (h *HopfieldModel) PrintWeights() {
 	utils.PrettyPrintMatrix(h.weights)
 }

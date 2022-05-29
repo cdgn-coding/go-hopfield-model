@@ -35,6 +35,9 @@ func main() {
 		return
 	}
 
+	weightX, weightY := model.WeightDims()
+	fmt.Printf("Size of parameters %d x %d\n", weightX, weightY)
+
 	fmt.Println("First pattern with 20% noise probability")
 	centeredWithNoise := mat.DenseCopyOf(centeredMat)
 	utils.AddNoiseToMatrix(centeredWithNoise, 0.1)

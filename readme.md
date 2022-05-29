@@ -21,8 +21,10 @@ models/
 utils/
 -- files.go
 -- matrix.go
-// Programa princial
-main.go
+// Programa principal
+cmd/
+-- poc/
+---- main.go
 ```
 
 ## Implementación
