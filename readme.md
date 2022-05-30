@@ -30,7 +30,7 @@ cmd/
 ## Implementación
 
 El modelo se implementa mediante una estructura de datos `HopfieldModel`,
-el cual se puede instanciar sin argumentos `NewHopfieldModel` y entrenar con el método `TrainWithHebbMethod`.
+el cual se puede instanciar sin argumentos con `NewHopfieldModel` y entrenar con el método `TrainWithHebbMethod`.
 El número de nodos se deduce durante la fase de entrenamiento.
 Cabe destacar que este modelo lee y retorna matrices NxM, es decir, imagenes
 de N pixeles de alto por M píxeles de ancho, sin embargo, internamente realiza
@@ -42,6 +42,8 @@ matrices NMx1.
 class HopfieldModel {
     TrainWithHebbMethod(patterns Dense[])
     PrintWeights()
+    PrintDims()
+    Pass(input Dense)
 }
 @enduml
 ```
