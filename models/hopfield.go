@@ -44,7 +44,7 @@ func (h *HopfieldModel) TrainWithHebbMethod(patterns []*mat.Dense) error {
 	for k := 0; k < len(patterns); k++ {
 		weightsK := mat.NewDense(rows*columns, rows*columns, nil)
 		patternK := mat.NewDense(1, rows*columns, patterns[k].RawMatrix().Data)
-		patternKTransposed := mat.Transpose{Matrix: patternK}
+		patternKTransposed := patternK.T()
 		weightsK.Mul(patternKTransposed, patternK)
 		weightsK.Sub(weightsK, eye(rows*columns))
 		weights.Add(weights, weightsK)
