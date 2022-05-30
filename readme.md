@@ -94,3 +94,14 @@ Al hacer la pasada por el modelo, se obtiene la imagen esperada, el primer patro
 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0
 ```
+
+### Estadísticas
+
+Si realizamos 100 experimentos de Bernoulli para conocer el rendimiento de la red neuronal,
+en particular, el porcentaje de veces que infiere la clase correcta, obtenemos los siguientes resultados.
+
+```
+20% Noise. Stabilization with 1 passes. Success ratio of 1.00
+30% Noise. Stabilization with 91 passes. Success ratio of 0.90
+40% Noise. Stabilization with 161 passes. Success ratio of 0.67
+```
